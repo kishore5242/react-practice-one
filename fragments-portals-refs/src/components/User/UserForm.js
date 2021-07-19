@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Card from "../UI/Card";
 import Modal from "../UI/Modal";
 import styles from "./UserForm.module.css";
@@ -9,6 +9,8 @@ function UserForm(props) {
     const [ageInput, setAgeInput] = useState(1);
 
     const [invalidInput, setInvalidInput] = useState(false);
+
+    const usernameRef = useRef();
 
     const usernameChangeHandler = (event) => {
         setUsernameInput(event.target.value);
@@ -32,6 +34,7 @@ function UserForm(props) {
     }
 
     const modalCancelHandler = () => {
+        usernameRef.current.focus();
         setInvalidInput(false);
     }
 
@@ -40,7 +43,7 @@ function UserForm(props) {
             <form onSubmit={userFormSubmitHandler}>
                 <div className={styles['form-control']}>
                     <label>Username</label>
-                    <input type="text" value={usernameInput} onChange={usernameChangeHandler}/>
+                    <input type="text" value={usernameInput} onChange={usernameChangeHandler} ref={usernameRef}/>
                 </div>
                 <div className={styles['form-control']}>
                     <label>Age (years)</label>

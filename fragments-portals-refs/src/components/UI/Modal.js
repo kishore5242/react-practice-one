@@ -1,9 +1,11 @@
+import { Fragment } from "react";
+import ReactDOM from "react-dom";
 import styles from "./Modal.module.css";
 
-function Modal(props) {
+function Overlay(props) {
 
     const modalCancelHandler = (event) => {
-        props.onModalCancel();
+        props.onCancel();
     }
 
     return (
@@ -18,6 +20,26 @@ function Modal(props) {
                 <input type="button" value="OK" onClick={modalCancelHandler}/>
             </div>
         </div>
+    );
+}
+
+function Backdrop() {
+    return <div className={styles.backdrop}></div>;
+}
+
+
+function Modal(props) {
+    return (
+        <Fragment>
+            {ReactDOM.createPortal(
+                <Overlay message={props.message} onCancel={props.onModalCancel}/>, 
+                document.getElementById('overlay-root')
+            )}
+            {ReactDOM.createPortal(
+                <Backdrop/>, 
+                document.getElementById('backdrop-root')
+            )}
+        </Fragment>
     );
 }
 export default Modal;
