@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  background-color: #313131;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  max-width: 70%;
+  margin-top: 50px;
+}

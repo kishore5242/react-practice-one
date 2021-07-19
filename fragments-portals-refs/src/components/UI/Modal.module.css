@@ -1,0 +1,26 @@
+.modal {
+    position: absolute;
+    width: 30%;
+    min-height: 100px;
+    top: 10%;
+    left: 30%;
+    border: 1px solid grey;
+    background-color: silver;
+}
+
+.header {
+    background-color: tomato;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    min-height: 30px;
+}
+
+.body {
+    height: 50%;
+}
+
+.footer {
+    text-align: right;
+    height: 25%;
+}
