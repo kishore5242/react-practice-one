@@ -1,0 +1,20 @@
+.item-row {
+    padding: 10px;
+    margin: 5px;
+    background: yellow;
+}
+
+.item {
+    display: inline-block;
+    width: 70%;
+}
+
+.right-side {
+    display: inline-block;
+    width: 20%;
+}
+
+.add-item-btn {
+    display: inline-block;
+    width: 40px;
+}

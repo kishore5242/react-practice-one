@@ -1,0 +1,17 @@
+.button {
+    background: pink;
+    border: 1px solid #c1609e;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.title {
+    color: #c1609e;
+    font-weight: bold;
+}
+
+.count {
+    margin-left: 10px;
+    font-size: small;
+    color: #2d061f;
+}

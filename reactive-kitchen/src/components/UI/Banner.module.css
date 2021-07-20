@@ -1,0 +1,18 @@
+.banner {
+    background: grey;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+
+.banner h2 {
+    width: 70%;
+    background: green;
+    display: inline;
+}
+
+.button {
+    float: right;
+    margin-right: 30px;
+    background: brown;
+}
