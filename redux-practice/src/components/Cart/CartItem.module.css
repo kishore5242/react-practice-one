@@ -1,0 +1,11 @@
+.cart-item {
+  overflow: auto;
+}
+
+.cart-item-left {
+  float: left;
+}
+
+.cart-item-right {
+  float: right;
+}

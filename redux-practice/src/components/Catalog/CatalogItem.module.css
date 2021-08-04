@@ -1,0 +1,11 @@
+.catalog-item {
+  overflow: auto;
+}
+
+.catalog-item-left {
+  float: left;
+}
+
+.catalog-item-right {
+  float: right;
+}
